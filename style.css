@@ -1,3 +1,7 @@
+body {
+  padding-bottom: 300px;
+}
+
 form {
   max-width: 1000px;
   margin: auto;
@@ -61,4 +65,37 @@ label:has(select)::after {
   @media (max-width: 480px) {
     column-count: 1;
   }
+}
+
+#photo,
+#photo>* {
+  all: initial;
+}
+
+#photo {
+  display: grid;
+  position: relative;
+
+  [type=file] {
+    display: none;
+
+    +input {
+      border: 1px solid #000;
+      width: 100px;
+      pointer-events: none;
+
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 2px;
+    left: 83px;
+  }
+}
+
+
+
+[fill="#D1E7FF"] {
+  fill: orange;
 }

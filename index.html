@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form styling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Your Information</legend>
+      <label>
+        <span>First Name</span>
+        <input type="text" name="first" required>
+      </label>
+      <label>
+        <span>Last Name</span>
+        <input type="text" name="last" required>
+      </label>
+      <label>
+        <span>Job Title</span>
+        <input type="text" name="job_title" required>
+      </label>
+      <label>
+        <span>Phone Number</span>
+        <input type="tel" name="tel" required>
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        <span>State</span>
+        <input type="text" name="state">
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Company Information</legend>
+      <label>
+        <span>Company</span>
+        <input type="text" name="company" required>
+      </label>
+      <label>
+        <span>Number of Screens Per Month</span>
+        <select name="screens">
+          <option value="" disabled selected hidden>-Please Select-</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </label>
+      <span>Services you're interested in:</span>
+      <div class="services">
+        <label>
+          <input type="checkbox" name="service1">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service2">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service3">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service4">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service5">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service6">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service7">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service8">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service9">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service10">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="service11">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+      </div>
+      <span>What areas would you like to see improved with your curremt process?</span>
+      <div class="improvements">
+        <label>
+          <input type="checkbox" name="improve1">
+          <span>
+            Lorem, ipsum.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="improve2">
+          <span>
+            Enim, consequatur.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="improve3">
+          <span>
+            At, pariatur!
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="improve4">
+          <span>
+            Nulla, dignissimos.
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="improve5">
+          <span>
+            Dignissimos, possimus?
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="improve6">
+          <span>
+            Ratione, nesciunt!
+          </span>
+        </label>
+        <label>
+          <input type="checkbox" name="improve7">
+          <span>
+            Deserunt, fugit.
+          </span>
+        </label>
+      </div>      
+    </fieldset>
+    <input type="submit">
+  </form>
+  <script>
+    document.querySelectorAll('span:has(+[required])').forEach(span => span.innerHTML += '*')
+  </script>
+</body>
+
+</html>

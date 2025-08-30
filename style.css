@@ -1,0 +1,64 @@
+form {
+  max-width: 1000px;
+  margin: auto;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4%;
+}
+
+label {
+  display: block;
+}
+
+label:not(:has([type=checkbox])) {
+  display: grid;
+}
+
+:first-child>label {
+  width: 48%;
+  flex-shrink: 0;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+input:not([type=submit]),
+select {
+  background: #f4f5f1;
+  border: none;
+  border-bottom: 2px solid grey;
+  padding: 8px 10px;
+}
+
+label:has(select)::after {
+  content: url("data:image/svg+xml,%3C%3Fxml version='1.0'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg id='Lager_1' style='enable-background:new -265 388.9 64 64;' version='1.1' viewBox='-265 388.9 64 64' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M-245.9,420.1l13.2-13c0.3-0.3,1.1-0.3,1.4,0l13.2,13c0.3,0.3-0.1,0.7-0.7,0.7h-26.4C-245.8,420.8-246.2,420.4-245.9,420.1 z'/%3E%3Cpath d='M-245.9,425.7l13.2,13c0.3,0.3,1.1,0.3,1.4,0l13.2-13c0.3-0.3-0.1-0.7-0.7-0.7h-26.4C-245.8,425-246.2,425.4-245.9,425.7z'/%3E%3C/g%3E%3C/svg%3E");
+  background: #f4f5f1;
+  width: 20px;
+  height: 20px;
+  margin: -28px 2px 0 auto;
+  pointer-events: none;
+}
+
+
+.services,
+.improvements {
+  width: 75%;
+  column-count: 3;
+
+  @media (max-width: 700px) {
+    width: 100%;
+    column-count: 2;
+  }
+
+  @media (max-width: 480px) {
+    column-count: 1;
+  }
+}
